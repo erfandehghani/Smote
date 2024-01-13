@@ -39,7 +39,7 @@ X = data.data
 y = data.target
 
 # Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=31)
 
 # Identify the minority class
 minority_class = pd.Series(y_train).value_counts().idxmin()
@@ -76,8 +76,8 @@ f1_normal = f1_score(y_test, y_pred_normal)
 print("Accuracy with SMOTE (minority class only):", accuracy_smote)
 print("F1-score with SMOTE (minority class only):", f1_smote)
 
-print("Accuracy with Normal (minority class only):", accuracy_normal)
-print("F1-score with Normal (minority class only):", f1_normal)
+print("Accuracy with Normal:", accuracy_normal)
+print("F1-score with Normal:", f1_normal)
 
 
 # Evaluate model on the original test set (without SMOTE)
