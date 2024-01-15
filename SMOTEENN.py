@@ -26,6 +26,9 @@ class SMOTEENN:
         self.minority_samples, self.minority_targets = self.get_minority_class()
         self.majority_samples, self.majority_targets = self.get_majority_class()
 
+    def get_x_and_y(self):
+        return self.x, self.y
+
     def separate_x(self):
         """Separates the x samples into lists based on their corresponding class labels.
 
